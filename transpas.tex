@@ -1,0 +1,139 @@
+% main.tex
+% Fichero principal de transparencias (incluye a todos los demás).
+
+% Compilar a .pdf con LaTeX (pdflatex)
+% Es necesario instalar Beamer (paquete latex-beamer en Debian)
+%
+
+% Gráficos:
+% Los gráficos pueden suministrarse en PNG, JPG, TIF, PDF, MPS
+% Los EPS deben convertirse a PDF (usar epstopdf)
+%
+\documentclass{beamer}
+\usetheme{Warsaw}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{headline}{}
+\useoutertheme{infolines}
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{format/libresoft-bg-soft.png}}
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphics}
+\usepackage{amssymb} % Simbolos matematicos
+
+\newcommand{\asignatura}{Prácticas educativas abiertas}
+\newcommand{\grado}{Itinerario formativo en innovación didáctica (URJC)}
+
+%\definecolor{libresoftgreen}{RGB}{162,190,43}
+%\definecolor{libresoftblue}{RGB}{0,98,143}
+
+%\setbeamercolor{titlelike}{bg=libresoftgreen}
+
+%% Metadatos del PDF.
+\hypersetup{
+  pdftitle={\asignatura},
+  pdfauthor={Jesús M. González Barahona, Gregorio Robles},
+  pdfcreator={GSyC, Universidad Rey Juan Carlos},
+  pdfproducer=PDFLaTeX,
+  pdfsubject={\asignatura},
+}
+%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% include-only                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\includeonly{intro}
+
+\AtBeginSection[]
+{
+\begin{frame}<beamer>
+\begin{center}
+{\Huge \insertsection}
+\end{center}
+\end{frame}
+}
+
+
+\begin{document}
+
+\title[\asignatura]{\asignatura}
+\subtitle{\grado}
+\author[GSyC]{Jesús M. González Barahona, Gregorio Robles Martínez}
+\institute{GSyC, Universidad Rey Juan Carlos}
+
+\date{Junio 2015}
+
+
+\frame{
+\maketitle
+
+\begin{center}
+\includegraphics[width=6cm]{format/gsyc-urjc}
+\end{center}
+}
+
+
+% Si el titulo o el autor se quieren acortar para los pies de página
+% se pueden redefinir aquí:
+%\title{Titulo corto}
+%\author{Autores abreviado}
+
+
+%% LICENCIA DE REDISTRIBUCION DE LAS TRANSPAS
+\frame{
+~
+\vspace{3cm}
+
+\begin{flushright}
+
+\includegraphics[width=2.2cm]{format/by-sa}
+ \\
+
+\begin{footnotesize}
+\copyright 2014-2015 Jesús M. González Barahona y Gregorio Robles. \\
+
+Algunos derechos reservados. Este artículo se distribuye bajo
+la licencia ``Reconocimiento-CompartirIgual 3.0 España'' de Creative Commons,
+disponible en \\
+{\small \url{http://creativecommons.org/licenses/by-sa/3.0/es/deed.es}}
+
+Este documento (o uno muy similar) está disponible en \\
+\url{http://LibreLearning.github.io}
+
+\end{footnotesize}
+\end{flushright}
+
+}
+%%
+
+\frame{
+\tableofcontents
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% lista de temas                                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{intro}
+
+%%---------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Créditos}
+
+\begin{itemize}
+\item Rompiendo ataduras, por Fran Silva \\
+  Creative Commons Atribución 2.0 \\
+  \url{https://www.flickr.com/photos/iscopy/6172392460}
+  % candado.jpg
+\item Abierto todo el año, por Montecruz Foto \\
+  Creative Commons Atribución Compartir Igual 2.0 \\
+  \url{https://www.flickr.com/photos/libertinus/982246782/}
+\end{itemize}
+
+\end{frame}
+
+\end{document}
